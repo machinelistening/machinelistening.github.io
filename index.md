@@ -4,10 +4,11 @@ This website will contain the lecture & seminar material for the short lecture *
 
 # Lectures
 
-- Lecture 1 - Introduction to Audio Representations
-- Lecture 2 - Introduction to Machine Learning
-- Lecture 3 - Music Information Retrieval
-- Lecture 4 - Machine Listening for Environmental Sounds
+- Intro ([Slides (PDF)](Machine_Listening_L0_Introduction.pdf))
+- Lecture 1 - Introduction to Audio Representations ([Slides (PDF)](Machine_Listening_L1_Audio_Representations.pdf))
+- Lecture 2 - Introduction to Machine Learning ([Slides (PDF)](Machine_Listening_L2_Machine_Learning.pdf))
+- Lecture 3 - Music Information Retrieval (Slides will be uploaded soon)
+- Lecture 4 - Machine Listening for Environmental Sounds (Slides will be uploaded soon)
 
 # Seminars
 
