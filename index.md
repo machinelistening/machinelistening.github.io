@@ -12,7 +12,7 @@ This website will contain the lecture & seminar material for the short lecture *
 
 # Seminars
 
- - Seminar 1 - Introduction to Python
+ - Seminar 1 - Introduction to Python - [IPython Notebook (.ipynb)](AST_Seminar_1.ipynb) & [Piano1-1.wav](Piano1-1.wav)
  - Seminar 2 - Audio Processing Basics
  - Seminar 3 - Sound Classification
 
