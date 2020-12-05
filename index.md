@@ -1,6 +1,6 @@
 # About
 
-This website will contain the lecture & seminar material for the short lecture *Machine Listening for Music and Sound Recognition*.
+This website contains the lecture & seminar material for the short lecture *Machine Listening for Music and Sound Recognition*, which was held for the first time in winter semester 2020 as part of the [*Audio Systems Technology*](https://www.tu-ilmenau.de/mt/lehrveranstaltungen/lehre-fuer-master-mt/audio-systems-technology/) lecture at [TU Ilmenau](https://www.tu-ilmenau.de/).
 
 # Lectures
 
