@@ -12,8 +12,8 @@ This website contains the lecture & seminar material for the short lecture *Mach
 
 # Seminars
 
- - Seminar 1 - Introduction to Python - [IPython Notebook (.ipynb)](AST_Seminar_1.ipynb) & [Piano1-1.wav](Piano1-1.wav)
- - Seminar 2 - Audio Processing Basics
+ - Seminar 1 - Introduction to Python - [Seminar 1 IPython Notebook (.ipynb)](Machine_Listening_Seminar_1.ipynb), [Seminar 1 Solutions IPython Notebook (.ipynb)](Machine_Listening_Seminar_1_Solutions.ipynb), [Piano1-1.wav](Piano1-1.wav)
+ - Seminar 2 - Audio Processing Basics - [Seminar 2 IPython Notebook (.ipynb)](Machine_Listening_Seminar_2.ipynb), [Seminar 2 Solutions IPython Notebook (.ipynb)](Machine_Listening_Seminar_2_Solutions.ipynb)
  - Seminar 3 - Sound Classification
 
 ### Contact
