@@ -1,1 +1,1 @@
-# Machine Listening for Music and Sound Recogntion
+# Machine Listening for Music and Sound Analysis (MLMSA)
