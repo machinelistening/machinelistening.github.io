@@ -8,9 +8,9 @@ This website contains the lecture & seminar material for the 6-part lecture *Mac
 - Lecture 1 - Introduction to Audio Representations - [Slides (PDF)](Machine_Listening_L1_Audio_Representations.pdf)
 - Lecture 2 - Introduction to Machine Learning - [Slides (PDF)](Machine_Listening_L2_Machine_Learning.pdf)
 - Lecture 3 - Music Information Retrieval I- [Slides (PDF)](Machine_Listening_L3_MIR_1.pdf)
-- Lecture 3 - Music Information Retrieval II - [Slides (PDF)](Machine_Listening_L4_MIR_2.pdf)
-- Lecture 4 - Environmental Sound Analysis I - [Slides (PDF)](Machine_Listening_L5_ESA_1.pdf)
-- Lecture 4 - Environmental Sound Analysis II - [Slides (PDF)](Machine_Listening_L6_ESA_2.pdf)
+- Lecture 4 - Music Information Retrieval II - [Slides (PDF)](Machine_Listening_L4_MIR_2.pdf)
+- Lecture 5 - Environmental Sound Analysis I - [Slides (PDF)](Machine_Listening_L5_ESA_1.pdf)
+- Lecture 6 - Environmental Sound Analysis II - [Slides (PDF)](Machine_Listening_L6_ESA_2.pdf)
 
 # Seminars
 
