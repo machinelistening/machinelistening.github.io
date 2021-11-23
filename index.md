@@ -1,6 +1,6 @@
 # About
 
-This website contains the lecture & seminar material for the 6-part lecture *Machine Listening for Music and Sound Analysis*, which will be held for the second time in this winter semester 2021 as part of the [*Audio Systems Technology*](https://www.tu-ilmenau.de/modultafeln/?pq=werner&fnq=8255) lecture at [TU Ilmenau](https://www.tu-ilmenau.de/).https://www.tu-ilmenau.de/modultafeln/?pq=werner&fnq=8255
+This website contains the lecture & seminar material for the 6-part lecture *Machine Listening for Music and Sound Analysis*, which will be held for the second time in this winter semester 2021 as part of the [*Audio Systems Technology*](https://www.tu-ilmenau.de/modultafeln/?pq=werner&fnq=8255) lecture at [TU Ilmenau](https://www.tu-ilmenau.de/).
 
 # Lectures
 
