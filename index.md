@@ -12,9 +12,7 @@ This website contains the lecture & seminar material for the 6-part lecture *Mac
 - Lecture 5 - Environmental Sound Analysis I - [Slides (PDF)](Machine_Listening_L5_ESA_1.pdf)
 - Lecture 6 - Environmental Sound Analysis II - [Slides (PDF)](Machine_Listening_L6_ESA_2.pdf)
 
-## Audio Examples 
-
-- Download "audio.zip" at [Zenodo](https://zenodo.org/record/5718279)
+- Audio examples included in the slides can be downloaded as "audio.zip" from [Zenodo](https://zenodo.org/record/5718279)
 
 ## Video recording of the lecture
 
