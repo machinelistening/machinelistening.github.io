@@ -16,7 +16,11 @@ This website contains the lecture & seminar material for the 6-part lecture *Mac
 
 - Download "audio.zip" at [Zenodo](https://zenodo.org/record/5718279)
 
-# Seminars
+## Video recording of the lecture
+
+- This year's lectures will be recorded, you can contact [Jakob Abeßer](jakob.abesser@idmt.fraunhofer.de) for access
+
+# Seminar Material
 
  - Seminar 1 - Introduction to Python - [Seminar 1 IPython Notebook (.ipynb)](Machine_Listening_Seminar_1.ipynb), [Seminar 1 Solutions IPython Notebook (.ipynb)](Machine_Listening_Seminar_1_Solutions.ipynb), [Piano1-1.wav](Piano1-1.wav)
  - Seminar 2 - Audio Processing Basics - [Seminar 2 IPython Notebook (.ipynb)](Machine_Listening_Seminar_2.ipynb), [Seminar 2 Solutions IPython Notebook (.ipynb)](Machine_Listening_Seminar_2_Solutions.ipynb)
