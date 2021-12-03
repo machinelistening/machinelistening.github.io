@@ -22,6 +22,8 @@ This website includes the lecture & seminar material for the 6-part lecture *Mac
 
 # Seminar Material
 
+Seminars are currently held by Dipl.-Ing. Christian Kehling and Dipl.-Inf. Michael Taenzer.
+
  - Seminar 1 - Introduction to Python - [IPython Notebook (.ipynb)](Machine_Listening_Seminar_1.ipynb), [HTML](Machine_Listening_Seminar_1.html), [Piano1-1.wav](Piano1-1.wav)
  - Seminar 2 - Audio Processing Basics - [IPython Notebook (.ipynb)](Machine_Listening_Seminar_2.ipynb), [HTML](Machine_Listening_Seminar_2.html)
  - Seminar 3 - Sound Classification - Update soon
