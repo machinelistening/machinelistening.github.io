@@ -2,7 +2,7 @@
 
 This website includes the lecture & seminar material for the 6-part lecture *Machine Listening for Music and Sound Analysis*, which will be held for the second time in this winter semester 2021 as part of the [*Audio Systems Technology*](https://www.tu-ilmenau.de/modultafeln/?pq=werner&fnq=8255) lecture at [TU Ilmenau](https://www.tu-ilmenau.de/).
 
-*Last Update*: 03.12.2021
+*Last Update*: 13.12.2021
 
 # Lectures
 
@@ -18,7 +18,7 @@ This website includes the lecture & seminar material for the 6-part lecture *Mac
 
 ## Video recording of the lecture
 
-- This year's lectures will be recorded, you can contact [Jakob Abeßer](jakob.abesser@idmt.fraunhofer.de) for access
+- This year's lectures will be recorded, you can contact [Jakob Abeßer](mailto:jakob.abesser@idmt.fraunhofer.de?subject=[MachineListening]%20Lecture%20Video%20Access)
 
 # Seminar Material
 
