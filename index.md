@@ -2,7 +2,7 @@
 
 This website includes lecture & seminar material for the 6-part lecture *Machine Listening for Music and Sound Analysis*, which will be held for the second time in the Winter semester 2021/22 as part of the [*Audio Systems Technology*](https://www.tu-ilmenau.de/modultafeln/?pq=werner&fnq=8255) lecture at [TU Ilmenau](https://www.tu-ilmenau.de/).
 
-*Last Update*: 05.01.2022
+*Last Update*: 23.01.2022
 
 # Lectures
 
@@ -27,7 +27,7 @@ Seminars are currently held by Dipl.-Ing. Christian Kehling and Dipl.-Inf. Micha
  - Seminar 1 - Introduction to Python - [IPython Notebook (ipynb)](Machine_Listening_Seminar_1.ipynb), [html](Machine_Listening_Seminar_1.html), [Piano1-1.wav](Piano1-1.wav)
  - Seminar 2 - Audio Processing Basics - [ipynb](Machine_Listening_Seminar_2.ipynb), [html](Machine_Listening_Seminar_2.html)
  - Seminar 3 - Sound Classification - [ipynb](Machine_Listening_2021_2022_Seminar_3.ipynb), [html](Machine_Listening_2021_2022_Seminar_3.html); Solutions: [ipynb](Machine_Listening_2021_2022_Seminar_3_Solutions.ipynb), [html](Machine_Listening_2021_2022_Seminar_3_Solutions.html)
- - Seminar 4 - Music Classification - Update soon (Seminar on Jan 14)
+ - Seminar 4 - Music Classification - [ipynb](Machine_Listening_2021_2022_Seminar_4.ipynb), [html](Machine_Listening_2021_2022_Seminar_4.html); Solutions: [ipynb](Machine_Listening_2021_2022_Seminar_4_Solutions.ipynb), [html](Machine_Listening_2021_2022_Seminar_4_Solutions.html)
 
 ### Contact
 
