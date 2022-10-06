@@ -19,11 +19,11 @@ This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in t
 - AIAA 1 - Python 
    - [Slides (PDF)](AIAA_1_Python.pdf)
    - [Jupyter Notebook (ipynb)](AIAA_1_Python.ipynb)
-      - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_2_Audio_Processing.ipynb)
+      - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_1_Python.ipynb)
 - AIAA 2 - Audio Processing 
    - [Slides (PDF)](AIAA_2_Audio_Processing.pdf)
    - [Jupyter Notebook (ipynb)](AIAA_2_Audio_Processing.ipynb)
-      - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_1_Python.ipynb)
+      - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_2_Audio_Processing.ipynb)
    - Audio Examples
       - [bird.wav](bird.wav)
       - [piano.wav](piano.wav)
