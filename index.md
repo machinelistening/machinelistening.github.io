@@ -4,7 +4,9 @@ This website provides the lecture / seminar materials of different lectures on t
 
 Please contact Dr.-Ing. Jakob Abeßer @ <jakob.abesser@idmt.fraunhofer.de> for questions.
 
-## KI-gestützte Audioanalyse von Musik und Soundscapes (HfM Weimar, 2022-23, Dr.-Ing. Jakob Abeßer + Prof. Dr. Martin Pfleiderer)
+## KI-gestützte Audioanalyse von Musik und Soundscapes / AI-based Audio Analysis
+
+**(HfM Weimar, 2022-23, Dr.-Ing. Jakob Abeßer + Prof. Dr. Martin Pfleiderer)**
 
 This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in the Winter semester 2022/23 on a bi-weekly basis.
 
@@ -29,7 +31,9 @@ This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in t
    - **will be uploaded soon**
 
 
-## Machine Listening for Music and Sound Analysis (TU Ilmenau, 2022-23, Dr.-Ing. Jakob Abeßer)
+## Machine Listening for Music and Sound Analysis 
+
+**(TU Ilmenau, 2022-23, Dr.-Ing. Jakob Abeßer)**
 
 This lecture will be held for the third time in the Winter semester 2022/23 as part of the **Audio Signal Processing & Audio Systems** Module at [TU Ilmenau](https://www.tu-ilmenau.de/).
 
