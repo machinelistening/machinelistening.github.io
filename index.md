@@ -4,15 +4,32 @@ This website provides the lecture / seminar materials of different lectures on t
 
 Please contact Dr.-Ing. Jakob Abeßer @ <jakob.abesser@idmt.fraunhofer.de> for questions.
 
-## Lecture 1 - KI-gestützte Audioanalyse von Musik und Soundscapes (HfM Weimar, 2022-23, Dr.-Ing. Jakob Abeßer + Prof. Dr. Martin Pfleiderer)
+## KI-gestützte Audioanalyse von Musik und Soundscapes (HfM Weimar, 2022-23, Dr.-Ing. Jakob Abeßer + Prof. Dr. Martin Pfleiderer)
 
 This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in the Winter semester 2022/23 on a bi-weekly basis.
-The seminar material will be added soon.
 
-*Last Update*: 07.07.2022
+*Last Update*: 06.10.2022
+
+### Lecture Material (Slides / Jupyter Notebooks)
+
+- AIAA 0 - Introduction 
+   - [Slides (PDF)](AIAA_0_Introduction.pdf)
+- AIAA 1 - Python 
+   - [Slides (PDF)](AIAA_1_Python.pdf)
+   - [Jupyter Notebook (ipynb)](AIAA_1_Python.ipynb)
+- AIAA 2 - Audio Processing 
+   - [Slides (PDF)](AIAA_2_Audio_Processing.pdf)
+   - [Jupyter Notebook (ipynb)](AIAA_2_Audio_Processing.ipynb)
+   - Audio Examples
+      - [bird.wav](bird.wav)
+      - [piano.wav](piano.wav)
+- AIAA 3 - Research Projects 
+   - [Slides (PDF)](AIAA_3_Research_Projects.pdf)
+- AIAA 4 - Machine Learning / Deep Learning
+   - **will be uploaded soon**
 
 
-## Lecture 2 - Machine Listening for Music and Sound Analysis (TU Ilmenau, 2022-23, Dr.-Ing. Jakob Abeßer)
+## Machine Listening for Music and Sound Analysis (TU Ilmenau, 2022-23, Dr.-Ing. Jakob Abeßer)
 
 This lecture will be held for the third time in the Winter semester 2022/23 as part of the **Audio Signal Processing & Audio Systems** Module at [TU Ilmenau](https://www.tu-ilmenau.de/).
 
