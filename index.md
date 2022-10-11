@@ -17,7 +17,9 @@ This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in t
 - AIAA 0 - Introduction 
    - [Slides (PDF)](AIAA_0_Introduction.pdf)
 - AIAA 1 - Python 
-   - [Slides (PDF)](AIAA_1_Python.pdf)
+   - [Slides (PDF) - How to install / use python (local, Jupyter Notebook, Google Colab)](AIAA_1_Python_Environments.pdf)
+      - [Config file (YML) for conda environment](aiaa.yml)
+   - [Slides (PDF) - Python Basics](AIAA_1_Python.pdf)
    - [Jupyter Notebook (ipynb)](AIAA_1_Python.ipynb)
       - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_1_Python.ipynb)
 - AIAA 2 - Audio Processing 
