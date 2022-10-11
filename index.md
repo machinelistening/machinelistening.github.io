@@ -4,7 +4,7 @@ This website provides the lecture / seminar materials of different lectures on t
 
 Please contact Dr.-Ing. Jakob Abeßer @ <jakob.abesser@idmt.fraunhofer.de> for questions.
 
-## KI-gestützte Audioanalyse von Musik und Soundscapes / AI-based Audio Analysis
+## AI-based Audio Analysis (KI-gestützte Audioanalyse von Musik und Soundscapes) 
 
 **(HfM Weimar, 2022-23, Dr.-Ing. Jakob Abeßer + Prof. Dr. Martin Pfleiderer)**
 
