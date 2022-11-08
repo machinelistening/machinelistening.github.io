@@ -6,11 +6,11 @@ Please contact Dr.-Ing. Jakob Abeßer @ <jakob.abesser@idmt.fraunhofer.de> for q
 
 ## AI-based Audio Analysis (KI-gestützte Audioanalyse von Musik und Soundscapes) 
 
-**(HfM Weimar, 2022-23, Dr.-Ing. Jakob Abeßer + Prof. Dr. Martin Pfleiderer)**
+**(HfM Weimar, Winter Semester 2022/2023, Dr.-Ing. Jakob Abeßer + Prof. Dr. Martin Pfleiderer)**
 
 This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in the Winter semester 2022/23 on a bi-weekly basis.
 
-*Last Update*: 06.10.2022
+*Last Update*: 08.11.2022
 
 ### Lecture Material (Slides / Jupyter Notebooks)
 
@@ -20,6 +20,7 @@ This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in t
    - [Slides (PDF) - How to install / use python (local, Jupyter Notebook, Google Colab)](AIAA_1_Python_Environments.pdf)
       - [Config file (YML) for conda environment](aiaa.yml)
    - [Slides (PDF) - Python Basics](AIAA_1_Python.pdf)
+   - [Audio Examples (ZIP with WAV files](AIAA_2_Audio_Processing_Audio_Examples.zip) - **need to be unzipped into subfolder called "audio"**
    - [Jupyter Notebook (ipynb)](AIAA_1_Python.ipynb)
       - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_1_Python.ipynb)
 - AIAA 2 - Audio Processing 
