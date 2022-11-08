@@ -20,16 +20,16 @@ This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in t
    - [Slides (PDF) - How to install / use python (local, Jupyter Notebook, Google Colab)](AIAA_1_Python_Environments.pdf)
       - [Config file (YML) for conda environment](aiaa.yml)
    - [Slides (PDF) - Python Basics](AIAA_1_Python.pdf)
-   - [Audio Examples (ZIP with WAV files](AIAA_2_Audio_Processing_Audio_Examples.zip) - **need to be unzipped into subfolder called "audio"**
    - [Jupyter Notebook (ipynb)](AIAA_1_Python.ipynb)
       - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_1_Python.ipynb)
 - AIAA 2 - Audio Processing 
    - [Slides (PDF)](AIAA_2_Audio_Processing.pdf)
+     - [Audio Examples (ZIP with WAV files](AIAA_2_Audio_Processing_Audio_Examples.zip) - **need to be unzipped into subfolder called "audio"**
    - [Jupyter Notebook (ipynb)](AIAA_2_Audio_Processing.ipynb)
       - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_2_Audio_Processing.ipynb)
-   - Audio Examples
-      - [bird.wav](bird.wav)
-      - [piano.wav](piano.wav)
+      - Audio Examples
+         - [bird.wav](bird.wav)
+         - [piano.wav](piano.wav)
 - AIAA 3 - Research Projects 
    - [Slides (PDF)](AIAA_3_Research_Projects.pdf)
 - AIAA 4 - Machine Learning / Deep Learning
