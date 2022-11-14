@@ -42,17 +42,17 @@ This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in t
 
 This lecture will be held for the third time in the Winter semester 2022/23 as part of the **Audio Signal Processing & Audio Systems** Module at [TU Ilmenau](https://www.tu-ilmenau.de/).
 
-*Last Update*: 07.07.2022
+*Last Update*: 14.11.2022
 
 ### Lecture Material
 
 - Intro - [Slides (PDF)](Machine_Listening_L0_Introduction.pdf)
 - Lecture 1 - Introduction to Audio Representations - [Slides (PDF)](Machine_Listening_L1_Audio_Representations.pdf)
 - Lecture 2 - Introduction to Machine Learning - [Slides (PDF)](Machine_Listening_L2_Machine_Learning.pdf)
-- Lecture 3 - Music Information Retrieval I - [Slides (PDF)](Machine_Listening_L3_MIR_1.pdf)
-- Lecture 4 - Music Information Retrieval II - [Slides (PDF)](Machine_Listening_L4_MIR_2.pdf)
-- Lecture 5 - Environmental Sound Analysis I - [Slides (PDF)](Machine_Listening_L5_ESA_1.pdf)
-- Lecture 6 - Environmental Sound Analysis II - [Slides (PDF)](Machine_Listening_L6_ESA_2.pdf)
+- Lecture 3 - Music Information Retrieval I - [Slides (PDF)](Machine_Listening_L3_MIR_1.pdf) (*will be updated soon ...*)
+- Lecture 4 - Music Information Retrieval II - [Slides (PDF)](Machine_Listening_L4_MIR_2.pdf) (*will be updated soon ...*)
+- Lecture 5 - Environmental Sound Analysis I - [Slides (PDF)](Machine_Listening_L5_ESA_1.pdf) (*will be updated soon ...*)
+- Lecture 6 - Environmental Sound Analysis II - [Slides (PDF)](Machine_Listening_L6_ESA_2.pdf) (*will be updated soon ...*)
 
 - Audio examples included in the slides can be downloaded as "audio.zip" from [Zenodo](https://zenodo.org/record/5718279)
 
