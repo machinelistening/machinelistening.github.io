@@ -32,8 +32,12 @@ This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in t
          - [piano.wav](piano.wav)
 - AIAA 3 - Research Projects 
    - [Slides (PDF)](AIAA_3_Research_Projects.pdf)
-- AIAA 4 - Machine Learning / Deep Learning
-   - **will be uploaded soon**
+- AIAA 4 - Machine Learning 
+   - [Slides (PDF)](AIAA_4_Machine_Learning.pdf)
+   - [Jupyter Notebook (ipynb)](AIAA_4_Machine_Learning.ipynb)
+      - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_4_Machine_Learning.ipynb)
+      - Audio Examples
+         - [animal_sounds.zip](animal_sounds.zip) - Unzip this file in a subdirectory called ```audio```, it contains 25 WAV files in 5 subdirectories. The folder structure must be /audio/animal_sounds/cats/...
 
 
 ## Machine Listening for Music and Sound Analysis 
