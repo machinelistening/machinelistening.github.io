@@ -49,6 +49,18 @@ This seminar will be held jointly with Prof. Martin Pfleiderer (HfM Weimar) in t
       - [Open in Google Colab](https://colab.research.google.com/github/machinelistening/machinelistening.github.io/blob/master/AIAA_5_Deep_Learning.ipynb)
       - This notebook again uses the audio examples from the previous lecture (animal classification)
 
+- **AIAA 6 - Research Project - Useful hints**
+   - Additional hints for the research project
+      - How to read dataset metadata from CSV files?
+      - How to segment audio files into uniform-length segments?
+      - Dataset split into training and test set
+      - Alternative audio features for specific tasks
+      - Research report structure
+      - Resources for literatur research
+   - [HTML](AIAA_6_Research_Project_Useful_Hints.html)
+   - [Jupyter Notebook (ipynb)](AIAA_6_Research_Project_Useful_Hints.ipynb)
+
+
 ## Machine Listening for Music and Sound Analysis 
 
 **(TU Ilmenau, 2022-23, Dr.-Ing. Jakob Abeßer)**
