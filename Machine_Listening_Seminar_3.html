@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Machine_Listening_Seminar_1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Machine_Listening_Seminar_3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7482,23 +7482,10 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="(0)-Before-we-get-started">(0) Before we get started<a class="anchor-link" href="#(0)-Before-we-get-started">¶</a></h1><p><strong>You need a Google account to edit and run code here.</strong></p>
-<ol>
-<li>Sign into your Google account and open this ipynb again.</li>
-<li>From the menu, choose <em>Save a copy in Drive</em>, open that one and close this one.</li>
-<li>Download <a href="https://github.com/machinelistening/machinelistening.github.io/blob/master/Piano1-1.wav">https://github.com/machinelistening/machinelistening.github.io/blob/master/Piano1-1.wav</a></li>
-<li>On the left side here, click the folder icon, then upload <em>Piano1-1.wav</em> (root/content/Piano1-1.wav).</li>
-</ol>
-<p><strong>OR if you don't have/want that, execute the .ipynb locally:</strong></p>
-<ol>
-<li>Download the .ipynb and <em>Piano1-1.wav</em> from the course github.</li>
-<li>Install miniconda (<a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a>)</li>
-<li>Open a terminal/Anaconda prompt</li>
-<li>"conda create -n [name] python=3.7"</li>
-<li>"conda activate [name]"</li>
-<li>"pip install {numpy, matplotlib, librosa, ipython, jupyter}"</li>
-<li>"jupyter notebook Machine_Listening_Seminar_1.ipynb"</li>
-<li>A browser tab should open with URL "<a href="http://localhost:8888/notebooks/Machine_Listening_Seminar_1.ipynb">http://localhost:8888/notebooks/Machine_Listening_Seminar_1.ipynb</a>" and you should see the document.</li>
+<h1 id="Before-you-start"><strong>Before you start</strong><a class="anchor-link" href="#Before-you-start">¶</a></h1><ol>
+<li>Go to "<em>File</em>" --&gt; "<em>Save a copy in Drive</em>"</li>
+<li>Open that copy (might open automatically)</li>
+<li>Then continue below</li>
 </ol>
 </div>
 </div>
@@ -7511,49 +7498,17 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h1 id="(1)-Hello-world">(1) Hello world<a class="anchor-link" href="#(1)-Hello-world">¶</a></h1><p>Welcome to your first MIR seminar! Topics today:</p>
-<ul>
-<li>Python basics and library usage</li>
-<li>How to create a sine wave</li>
-<li>Disassemble the sine wave into its STFT-spectrum, Mel-spectrum and chromagram</li>
-<li>See the spectral differences between a sine wave and piano chords</li>
-</ul>
-<p>Let's get started with some elemental Python basics!</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">part1</span> <span class="o">=</span> <span class="s1">'Hello,'</span>
-<span class="n">part2</span> <span class="o">=</span> <span class="s1">'AST world!'</span>
-<span class="nb">print</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># FILL IN: Concatenate the two strings and insert a space</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Let</span><span class="se">\'</span><span class="s1">s do a headcount!'</span><span class="p">)</span>
-<span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>  <span class="c1"># FILL IN: Start and end of the loop. Start at 1, end at 10!</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Great, everyone is here.'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Expected outputs:</p>
-<ul>
-<li>'Hello, AST world!'</li>
-<li>1, 2, 3, 4, 5, 6, 7, 8, 9, 10 (ommitted line breaks here)</li>
+<hr/>
+<hr/>
+<h1 id="Machine-Listening-Seminar-3:-Sound/Music-classification-with-simple-Neural-Networks">Machine Listening Seminar 3: Sound/Music classification with simple Neural Networks<a class="anchor-link" href="#Machine-Listening-Seminar-3:-Sound/Music-classification-with-simple-Neural-Networks">¶</a></h1><ul>
+<li>We need real data to work with, so we revisit the previous seminar and <strong>race</strong> through sections 1-8 here:</li>
+<li>Curate a "ESC-5" dataset, generate features and targets</li>
+<li>Create simple neural networks</li>
+<li>Keras / Tensorflow</li>
+<li>Dense &amp; Convolutional layers</li>
+<li>Activations &amp; Dropout</li>
+<li>Training &amp; Evaluation</li>
+<li>Compare evaluation scores of the different approaches</li>
 </ul>
 </div>
 </div>
@@ -7566,310 +7521,8 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h1 id="(2)-Python-&amp;-numpy-basics">(2) Python &amp; numpy basics<a class="anchor-link" href="#(2)-Python-&amp;-numpy-basics">¶</a></h1><ul>
-<li>A quick look at some functionalities of the Python <em>numpy</em> package</li>
-<li>importing Python libraries</li>
-<li>see: <a href="https://numpy.org/doc/stable/reference/index.html">https://numpy.org/doc/stable/reference/index.html</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>              <span class="c1"># vector/"1D-array" with values 1 and 2</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>              <span class="c1"># same, values 3 and 4</span>
-<span class="n">ab1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>           <span class="c1"># stacks them into a matrix</span>
-<span class="n">ab2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>  <span class="c1"># same as ab1</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>               <span class="c1"># 2D-array with 2 rows and 3 columns, filled with ones.</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">ab2</span><span class="p">)</span>                   <span class="c1"># natural logarithm</span>
-
-<span class="n">e</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>               <span class="c1"># a list (not numpy)</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>         <span class="c1"># [3, 4, 5, 6, 7]</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>                     <span class="c1"># sum of the elements in e</span>
-<span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">e</span><span class="p">,</span> <span class="n">f</span><span class="p">))</span>                <span class="c1"># sum of the elements in both e and f</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ab1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>           <span class="c1"># sum per column of the matrix</span>
-<span class="n">ef</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>  <span class="c1"># intersection of e and f</span>
-
-<span class="n">m</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                          <span class="c1"># first element of e</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>                        <span class="c1"># indices 2 and 3 of e</span>
-<span class="n">o</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>                         <span class="c1"># last element of e</span>
-<span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>                        <span class="c1"># number of elements in e</span>
-<span class="n">q</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,],</span> <span class="mi">5</span><span class="p">]</span>  <span class="c1"># nested lists --&gt; length of q?</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'a: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'b: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ab1:</span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ab1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ab2:</span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ab2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'c:</span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'d:</span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'g: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'h: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">h</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'i: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ef: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ef</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'m: </span><span class="si">{}</span><span class="s1">, n: </span><span class="si">{}</span><span class="s1">, o: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">o</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'p: </span><span class="si">{}</span><span class="s1">, len(q): </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">q</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<hr/>
-<h1 id="(3)-Sine-wave">(3) Sine wave<a class="anchor-link" href="#(3)-Sine-wave">¶</a></h1><p>Next, we create a sine wave, which helps us get introduced to more Python concepts. Topics:</p>
-<ul>
-<li>formula for a sine wave</li>
-<li>get to know <em>matplotlib</em> for plotting graphs</li>
-</ul>
-<p><strong>Your task:</strong>
-Create a 1-second sinusoid with an amplitude of 3, a frequency of the note E3 (164,81 Hz) at a sample rate (fs) of 22050 Hz. Then sample the first 500 elements for the plot.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">IPython.display</span> <span class="k">as</span> <span class="nn">ipd</span>
-
-
-<span class="c1">### START CODING HERE ###</span>
-<span class="n">amp</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">freq</span> <span class="o">=</span> <span class="mf">164.81</span>
-<span class="n">fs</span> <span class="o">=</span> <span class="mi">22050</span>
-
-<span class="n">t</span> <span class="o">=</span> <span class="o">...</span>                           <span class="c1"># Set up time samples.</span>
-<span class="n">pha</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="n">sine_wave</span> <span class="o">=</span> <span class="o">...</span>                   <span class="c1"># Formula for sine wave. Use np where applicable.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>  <span class="c1"># FILL IN: Print the first 10 samples of your sine wave.</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>                 <span class="c1"># FILL IN: Plot the first 500 samples of your sine wave. Takes parameters time and data.</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">'...'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'...'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Simple sine wave'</span><span class="p">)</span>  <span class="c1"># FILL IN: Axis labels</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="c1">### END CODING HERE ###</span>
-
-
-<span class="n">ipd</span><span class="o">.</span><span class="n">Audio</span><span class="p">(</span><span class="n">sine_wave</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>expected output: [0.   0.14 0.28 0.42 0.56 0.7  0.83 0.97 1.1  1.23]</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="(4)-Path-operations-with-os-library">(4) Path operations with os library<a class="anchor-link" href="#(4)-Path-operations-with-os-library">¶</a></h1><ul>
-<li><em>os</em> library (<a href="https://docs.python.org/3/library/os.html">https://docs.python.org/3/library/os.html</a>)</li>
-<li>Path operations useful for datasets, file checks, sytem operations</li>
-<li>Playground for parameters</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-
-<span class="n">current_os</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span>
-<span class="n">current_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>                        <span class="c1"># get the current working directory</span>
-                                                  <span class="c1"># 'nt' for windows, 'posix' for linux, among others</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Current operating system: "</span> <span class="o">+</span> <span class="n">current_os</span><span class="p">)</span>  <span class="c1"># get current operating system</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Current path: "</span> <span class="o">+</span> <span class="n">current_path</span><span class="p">)</span>
-
-<span class="n">new_folder</span> <span class="o">=</span> <span class="s2">"data"</span>                               <span class="c1"># create a new sub directory</span>
-<span class="n">abs_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_path</span><span class="p">,</span> <span class="n">new_folder</span><span class="p">)</span> <span class="c1"># concetenate path names</span>
-<span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>              <span class="c1"># Split absolute path</span>
-<span class="n">base_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Absolute path: "</span> <span class="o">+</span> <span class="n">abs_path</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"head: "</span> <span class="o">+</span> <span class="n">head</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"tail: "</span> <span class="o">+</span> <span class="n">tail</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"basename: "</span> <span class="o">+</span> <span class="n">base_name</span><span class="p">)</span>
-
-<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>                                <span class="c1"># create a new folder</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">new_folder</span><span class="p">)</span>                              <span class="c1"># enter folder</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>                                <span class="c1"># create 5 text files in the folder</span>
-  <span class="n">filename</span> <span class="o">=</span> <span class="s2">"example_"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">".txt"</span>
-  <span class="n">new_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span>
-  <span class="n">new_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">".."</span><span class="p">)</span>                                    <span class="c1"># change back to parent directory</span>
-
-<span class="n">example_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">abs_path</span><span class="p">,</span> <span class="s2">"example_0.txt"</span><span class="p">)</span>
-
-<span class="n">path_exists</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>           <span class="c1"># check if path exists</span>
-<span class="n">is_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">example_file</span><span class="p">)</span>            <span class="c1"># check if path is a file</span>
-<span class="n">is_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>                  <span class="c1"># check if path is a directory</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Does the path exist?: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">path_exists</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Is the path a file?: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">is_file</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Is the path a directory?: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">is_dir</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">example_file</span><span class="p">)</span>
-
-<span class="n">path_exists</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>           <span class="c1"># check if path exists</span>
-<span class="n">is_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">example_file</span><span class="p">)</span>            <span class="c1"># check if path is a file</span>
-<span class="n">is_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>                  <span class="c1"># check if path is a directory</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Does the path exist?: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">path_exists</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Is the path a file?: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">is_file</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Is the path a directory?: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">is_dir</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create 2 subfolders "speech" and "music" with 3 .txt files inside named</span>
-<span class="c1"># speech_file_00x.txt or music_file_00x.txt respectivly. (replace '00x' with</span>
-<span class="c1"># the actual file number)</span>
-
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="c1">### Start code here</span>
-
-<span class="c1">### End code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">'..'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># walk through folder structure and remove content</span>
-<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">abs_path</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-  <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Removing: "</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
-  <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
-      <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
-      <span class="nb">print</span> <span class="p">(</span><span class="s2">"Removing: "</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
-
-<span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>
-
-<span class="n">path_exists</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>           <span class="c1"># check if path exists</span>
-<span class="n">is_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">example_file</span><span class="p">)</span>            <span class="c1"># check if path is a file</span>
-<span class="n">is_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">abs_path</span><span class="p">)</span>                  <span class="c1"># check if path is a directory</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Does the path exist?: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">path_exists</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Is the path a file?: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">is_file</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Is the path a directory?: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">is_dir</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<hr/>
-<h1 id="(5)-Short-Time-Fourier-Transform-(STFT)-&amp;-Chromagram-(I):-Sine-wave">(5) Short-Time Fourier Transform (STFT) &amp; Chromagram (I): Sine wave<a class="anchor-link" href="#(5)-Short-Time-Fourier-Transform-(STFT)-&amp;-Chromagram-(I):-Sine-wave">¶</a></h1><p>Let's investigate the STFT. Topics:</p>
-<ul>
-<li><em>librosa</em> library (<a href="https://librosa.org/doc/latest/index.html">https://librosa.org/doc/latest/index.html</a>)</li>
-<li>Analysis of our sine wave using STFT and Chromagram</li>
-<li>Playground for parameters</li>
+<h1 id="1.-Import-libraries">1. Import libraries<a class="anchor-link" href="#1.-Import-libraries">¶</a></h1><ul>
+<li>We need a number of libraries. Import them once to use throughout the document.</li>
 </ul>
 </div>
 </div>
@@ -7883,90 +7536,22 @@ Create a 1-second sinusoid with an amplitude of 3, a frequency of the note E3 (1
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">librosa</span>
-<span class="kn">import</span> <span class="nn">librosa.display</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-
-<span class="c1">### Create an (mag-)STFT from the sine wave</span>
-<span class="n">stft_sine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">librosa</span><span class="o">.</span><span class="n">stft</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">sine_wave</span><span class="p">,</span> <span class="n">n_fft</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">hop_length</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">win_length</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="s1">'hann'</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pad_mode</span><span class="o">=</span><span class="s1">'reflect'</span><span class="p">))</span>
-<span class="n">stft_sine_db</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">amplitude_to_db</span><span class="p">(</span><span class="n">stft_sine</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">specshow</span><span class="p">(</span><span class="n">stft_sine_db</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="s1">'log'</span><span class="p">,</span> <span class="n">x_axis</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Power spectrogram'</span><span class="p">)</span>
-<span class="c1">#plt.colorbar(img, ax=ax, format="%+2.0f dB")</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-
-
-<span class="c1">### Create a chromagram from the STFT. Check the librosa doc!</span>
-<span class="n">chroma</span> <span class="o">=</span> <span class="o">...</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">specshow</span><span class="p">(</span><span class="n">chroma</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="s1">'chroma'</span><span class="p">,</span> <span class="n">x_axis</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Chromagram'</span><span class="p">)</span>
-<span class="c1">#plt.colorbar(img, ax=ax)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<hr/>
-<h1 id="(6)-Short-Time-Fourier-Transform-(STFT)-&amp;-Chromagram-(II):-Piano-chords">(6) Short-Time Fourier Transform (STFT) &amp; Chromagram (II): Piano chords<a class="anchor-link" href="#(6)-Short-Time-Fourier-Transform-(STFT)-&amp;-Chromagram-(II):-Piano-chords">¶</a></h1><p>Topics in this section:</p>
-<ul>
-<li>Get to know the STFT-spectrogram</li>
-<li>Spectrum analysis of piano overtones, in comparison to the sine wave</li>
-<li>Behaviour of Chromagram for notes over several octaves</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">librosa</span>
-<span class="kn">import</span> <span class="nn">librosa.display</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">IPython.display</span> <span class="k">as</span> <span class="nn">ipd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
 
 
-<span class="c1">### Example audio: Load 'Piano1-1.wav' using librosa. It has a sample rate of 44100. Convert it to mono.</span>
-<span class="n">piano_data</span><span class="p">,</span> <span class="n">piano_sr</span> <span class="o">=</span> <span class="o">...</span>
-
-
-<span class="c1">### Turn into STFT, then db, then plot</span>
-<span class="n">piano_stft</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">piano_stft_db</span> <span class="o">=</span> <span class="o">...</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">specshow</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="s1">'log'</span><span class="p">,</span> <span class="n">x_axis</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Power spectrogram'</span><span class="p">)</span>
-<span class="c1">#plt.colorbar(img, ax=ax, format="%+2.0f dB")</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-
-
-<span class="c1">### Turn the STFT into a chromagram, then db, then plot</span>
-<span class="o">...</span>
-<span class="o">...</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">specshow</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">y_axis</span><span class="o">=</span><span class="s1">'chroma'</span><span class="p">,</span> <span class="n">x_axis</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Chromagram'</span><span class="p">)</span>
-<span class="c1">#plt.colorbar(img, ax=ax)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="c1"># Tensorflow: check available devices</span>
+<span class="n">all_devices</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">list_physical_devices</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Found </span><span class="si">{}</span><span class="s1"> devices: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_devices</span><span class="p">),</span> <span class="n">all_devices</span> <span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7980,12 +7565,8 @@ Create a 1-second sinusoid with an amplitude of 3, a frequency of the note E3 (1
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Expected output:</p>
-<ul>
-<li>1st note block: [C E G] in succession, but overlapping</li>
-<li>2nd note block: [E G C+1 E+1] simultaneously</li>
-<li>3rd note block: [C E G C+1] simultaneously</li>
-<li>Chromagram: notice the same notes from different octaves are grouped together</li>
-</ul>
+<pre><code>Found 1 devices: [PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')]
+</code></pre>
 </div>
 </div>
 </div>
@@ -7997,10 +7578,11 @@ Create a 1-second sinusoid with an amplitude of 3, a frequency of the note E3 (1
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h1 id="(7)-Mel-Spectrogram">(7) Mel-Spectrogram<a class="anchor-link" href="#(7)-Mel-Spectrogram">¶</a></h1><p>The Mel-Spectrogram is based on the Mel scale, a perceptual scale of the pitches. Topics in this section:</p>
-<ul>
-<li>Mel-spectrogram with 128 bands and a f_max of 8000</li>
-<li>Analyse the difference to an STFT-spectrogram</li>
+<h1 id="2.-Fetch-the-Dataset">2. Fetch the Dataset<a class="anchor-link" href="#2.-Fetch-the-Dataset">¶</a></h1><ul>
+<li>ESC-50: a dataset for Environmental Sound Classification (<a href="https://github.com/karolpiczak/ESC-50">https://github.com/karolpiczak/ESC-50</a>, <a href="https://www.karolpiczak.com/papers/Piczak2015-ESC-Dataset.pdf">https://www.karolpiczak.com/papers/Piczak2015-ESC-Dataset.pdf</a>)</li>
+<li>50 classes, 40 files per class, 5s clips</li>
+<li>Download &amp; unzip the dataset running the cell below.</li>
+<li>In Google Colab, you will see the new files on the left (folder icon).</li>
 </ul>
 </div>
 </div>
@@ -8013,22 +7595,8 @@ Create a 1-second sinusoid with an amplitude of 3, a frequency of the note E3 (1
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">librosa</span>
-<span class="kn">import</span> <span class="nn">librosa.display</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-
-<span class="c1">### Create the Mel-spectrogram from the piano data, then convert it from power to dB</span>
-<span class="n">piano_mel</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">piano_mel_dB</span> <span class="o">=</span> <span class="o">...</span>
-
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">img</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># FILL IN: librosa's specshow()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Mel-Spectrogram'</span><span class="p">)</span>
-<span class="c1">#plt.colorbar(img, ax=ax, format="%+2.0f dB")</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>wget<span class="w"> </span>https://github.com/karolpiczak/ESC-50/archive/master.zip
+<span class="o">!</span>unzip<span class="w"> </span>master.zip
 </pre></div>
 </div>
 </div>
@@ -8042,13 +7610,994 @@ Create a 1-second sinusoid with an amplitude of 3, a frequency of the note E3 (1
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h1 id="(Coming-up)-Building-a-sound-classification-system---First-steps">(Coming up) <strong>Building a sound classification system</strong> - First steps<a class="anchor-link" href="#(Coming-up)-Building-a-sound-classification-system---First-steps">¶</a></h1><hr/>
-<h1 id="ESC-50-dataset">ESC-50 dataset<a class="anchor-link" href="#ESC-50-dataset">¶</a></h1><ul>
-<li><a href="https://github.com/karolpiczak/ESC-50">https://github.com/karolpiczak/ESC-50</a></li>
-<li>Dataset for Environmental Sound Classification</li>
-<li>We choose 5 classes, and 2 should be very similar to each other</li>
+<h1 id="3.-Metadata-and-analysis">3. Metadata and analysis<a class="anchor-link" href="#3.-Metadata-and-analysis">¶</a></h1><ul>
+<li>Let's recollect our memory on the structure of ESC-50.</li>
 </ul>
-<p>In the next AST seminar, we will use these things to build our own first simple sound classification system.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">fn_csv</span> <span class="o">=</span> <span class="s1">'ESC-50-master/meta/esc50.csv'</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fn_csv</span><span class="p">)</span>  <span class="c1"># reads csv, creates dataframe</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="n">unique_classes</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'category'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>  <span class="c1"># retrieves a list of unique classes</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Unique classes: </span><span class="si">{</span><span class="n">unique_classes</span><span class="si">}</span><span class="se">\n</span><span class="s1">Count: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_classes</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>    filename            fold  target  category        esc10   src_file  take
+0   1-100032-A-0.wav    1     0       dog             True    100032    A
+1   1-100038-A-14.wav   1     14      chirping_birds  False   100038    A
+2   1-100210-A-36.wav   1     36      vacuum_cleaner  False   100210    A
+3   1-100210-B-36.wav   1     36      vacuum_cleaner  False   100210    B
+4   1-101296-A-19.wav   1     19      thunderstorm    False   101296    A
+
+Unique classes: ['dog' 'chirping_birds' 'vacuum_cleaner' ... ]
+Count: 50
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="4.-ESC-5:-Curation">4. ESC-5: Curation<a class="anchor-link" href="#4.-ESC-5:-Curation">¶</a></h1><p>Let's select 5 classes (<em>our_classes</em>) from ESC-50 to make things a bit faster.</p>
+<p>*<strong>Tasks:</strong>*</p>
+<ul>
+<li>Collect all files that belong to <em>our_classes</em>.</li>
+<li>Put the files and their respective classes in separate lists. Make sure their indices are equal (meaning: the value at index 3 of list <em>A</em> is related to the value at index 3 of list <em>B</em>).<ul>
+<li>Idea 1: Use <em>df.values</em> to iterate over the rows of the csv</li>
+<li>Idea 2: Use <em>df.query('category in @our_classes')</em></li>
+</ul>
+</li>
+<li>Print the first 5 elements of each list as (file, class)-tuples. Also, print the overall lengths of the lists.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">our_classes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"crying_baby"</span><span class="p">,</span> <span class="s2">"dog"</span><span class="p">,</span> <span class="s2">"rain"</span><span class="p">,</span> <span class="s2">"rooster"</span><span class="p">,</span> <span class="s2">"sneezing"</span><span class="p">]</span>  <span class="c1"># Note: This is also our class map for later.</span>
+<span class="n">esc5_X</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># File list</span>
+<span class="n">esc5_y</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Class list</span>
+<span class="n">fn_csv</span> <span class="o">=</span> <span class="s2">"ESC-50-master/meta/esc50.csv"</span>
+
+
+<span class="c1">### START CODING HERE ###</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">...</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>  <span class="c1"># (This particular algorithm here works, but is not ideal)</span>
+  <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="o">...</span> <span class="o">==</span> <span class="o">...</span> <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="n">our_classes</span><span class="p">):</span>
+    <span class="n">esc5_X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="o">...</span> <span class="p">)</span>  <span class="c1"># Filename column</span>
+    <span class="o">....</span><span class="n">append</span><span class="p">(</span> <span class="o">...</span> <span class="p">)</span>  <span class="c1"># Class column</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">esc5_X</span><span class="p">[:</span><span class="mi">5</span><span class="p">],</span> <span class="n">esc5_y</span><span class="p">[:</span><span class="mi">5</span><span class="p">]))</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Lengths: esc5_X: </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">, esc5_y: </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>[('1-100032-A-0.wav', 'dog'), ('1-110389-A-0.wav', 'dog'), ('1-17367-A-10.wav', 'rain'), ('1-187207-A-20.wav', 'crying_baby'), ('1-211527-A-20.wav', 'crying_baby')]
+Lengths: esc5_X: 200, esc5_y: 200
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="5.-Splitting-the-dataset-into-train-and-test-subsets">5. Splitting the dataset into <em>train</em> and <em>test</em> subsets<a class="anchor-link" href="#5.-Splitting-the-dataset-into-train-and-test-subsets">¶</a></h1><p>*<strong>Tasks:</strong>*</p>
+<ul>
+<li>ESC-5 is almost ready. With <strong>sklearn</strong>, split the dataset into <strong>train</strong> and <strong>test</strong> subsets with a 80%/20% split ratio and random state 1337.</li>
+<li>Print the first 3 elements of the resulting <em>X_train</em>.</li>
+<li>Print the overall lengths of the resulting lists. Are they aligned with the ratio?</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ###</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="o">...</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="n">esc5_X</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=...</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=...</span><span class="p">)</span>  <span class="c1"># Look at your imports for a hint which function to use.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">...</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"X: </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">; y: </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>['5-203128-A-0.wav', '4-181286-A-10.wav', '3-157615-A-10.wav']
+X: 160, 40; y: 160, 40
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="6.-ESC-5:-Create-mel-spectrograms">6. ESC-5: Create mel spectrograms<a class="anchor-link" href="#6.-ESC-5:-Create-mel-spectrograms">¶</a></h1><p>We need to compute features and corresponding labels for each file in our ESC-5.</p>
+<p>*<strong>Tasks:</strong>*</p>
+<ul>
+<li>Define a function that does the following (in this order!):<ul>
+<li>takes input parameters: <em>X_train</em> (list of filenames), <em>y_train</em> (list of classes)</li>
+<li>loops over <em>X_train</em> (hint: <em>enumerate</em> it), and loads each file (.wav) using <strong>librosa</strong></li>
+<li>creates the mel spectrogram from the loaded .wav samples</li>
+<li>normalizes the mel spec by dividing it through the number of given <em>mel_bands</em>.</li>
+<li>transposes the mel spec</li>
+<li>appends the features (mel spec) to a feature tensor</li>
+<li>creates a target vector consisting of as many values as there are frames<ul>
+<li>hint: use <em>.shape</em> to see which value you need</li>
+</ul>
+</li>
+<li>each value inside the vector must correspond to the index of the class in <em>our_classes</em><ul>
+<li>hint: remember <em>numpy.ones(...)</em> ?</li>
+<li>hint: use <em>.index(...)</em> here. Not ideal, but works here.</li>
+</ul>
+</li>
+<li>appends the targets to a target tensor</li>
+<li>stacks the large feature and target lists appropriately</li>
+<li>returns the tensors</li>
+</ul>
+</li>
+<li>Finally, print the shapes of all 4 arrays.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ###</span>
+<span class="k">def</span> <span class="nf">extract_mel_spec</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+  <span class="n">X</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># feature tensor</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># target tensor</span>
+
+  <span class="n">mel_bands</span> <span class="o">=</span> <span class="mi">128</span>
+  <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="o">...</span><span class="p">(</span><span class="n">data_X</span><span class="p">)):</span>  <span class="c1"># tqdm displays a progress bar.</span>
+    <span class="n">wav_data</span><span class="p">,</span> <span class="n">sr</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ESC-50-master/audio/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># Use the wav file's sample rate.</span>
+
+    <span class="c1"># Features</span>
+    <span class="n">mel_spec</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">melspectrogram</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">wav_data</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="n">sr</span><span class="p">,</span> <span class="n">n_mels</span><span class="o">=</span><span class="n">mel_bands</span><span class="p">)</span>  <span class="c1"># Create mel spectrogram. Output shape: (128, 216) (n_mels, frames)</span>
+    <span class="n">mel_spec</span> <span class="o">=</span> <span class="n">mel_spec</span><span class="o">...</span>  <span class="c1"># Normalization</span>
+    <span class="n">mel_spec</span> <span class="o">=</span> <span class="n">mel_spec</span><span class="o">...</span>  <span class="c1"># Transposition. Output shape: (216, 128)</span>
+    <span class="n">X</span> <span class="o">...</span> <span class="p">(</span> <span class="n">mel_spec</span> <span class="p">)</span>  <span class="c1"># Append to feature tensor</span>
+
+    <span class="c1"># Targets == class_name</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span> <span class="n">mel_spec</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>  <span class="c1"># Create a PLACEHOLDER target vector. Output shape: (216) (Note: silent frames are NOT going to be labeled as "silent")</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="n">targets</span> <span class="o">*</span> <span class="n">our_classes</span><span class="o">.</span><span class="n">index</span><span class="p">(</span> <span class="n">data_y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span>  <span class="c1"># Convert values to actual class-index from 'our_classes'</span>
+    <span class="o">...</span>  <span class="c1"># Append to target tensor</span>
+
+  <span class="c1"># Stack tensors</span>
+  <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+  <span class="c1"># Return the tensors</span>
+  <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span>
+
+
+<span class="c1"># Call the function on our previously generated lists</span>
+<span class="n">X_train_ready</span><span class="p">,</span> <span class="n">y_train_ready</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">X_test_ready</span><span class="p">,</span> <span class="n">y_test_ready</span> <span class="o">=</span> <span class="n">extract_mel_spec</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="c1">### END CODING HERE ###</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Shapes: X_train_ready: </span><span class="si">{</span><span class="n">X_train_ready</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">, y_train_ready: </span><span class="si">{</span><span class="n">y_train_ready</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Shapes: X_test_ready: </span><span class="si">{</span><span class="n">X_test_ready</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">, y_test_ready: </span><span class="si">{</span><span class="n">y_test_ready</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>Shapes: X_train_ready: (34560, 128), y_train_ready: (34560,)
+Shapes: X_test_ready: (8640, 128), y_test_ready: (8640,)
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="7.-Train-a-nearest-neighbor-classifier">7. Train a nearest neighbor classifier<a class="anchor-link" href="#7.-Train-a-nearest-neighbor-classifier">¶</a></h1><p>*<strong>Tasks:</strong>*</p>
+<ul>
+<li>Use the features and targets from above to <strong>train/fit</strong> a kNN-classifier from sklearn, with 5 neighbors and uniform weighting.</li>
+<li>Print the scores on the train set and test set. Round to 4 decimals with <strong>np.round</strong>. (This will take some time!)</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ###</span>
+<span class="c1"># Feature scaling/standardization: removes mean &amp; scales to unit variance</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Scaling..."</span><span class="p">)</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_ready</span><span class="p">)</span>
+<span class="n">X_train_ready</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># Normalize the features here for both train and test</span>
+<span class="n">X_test_ready</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Fitting..."</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=...</span><span class="p">,</span> <span class="n">weights</span><span class="o">=...</span><span class="p">)</span>  <span class="c1"># Call the kNN-classifier. Look at your imports again for a hint.</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c1"># Fit/Train the classifier using our generated tensors.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Evaluating..."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Train score: </span><span class="si">{</span><span class="o">...</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="o">...</span><span class="p">),</span><span class="w"> </span><span class="n">decimals</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Test score: </span><span class="si">{</span><span class="o">...</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="o">...</span><span class="p">),</span><span class="w"> </span><span class="n">decimals</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output (might differ slightly):</p>
+<pre><code>Train score: 0.694
+Test score: 0.5138
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="8.-ESC-5:-Plot-the-confusion-matrix">8. ESC-5: Plot the confusion matrix<a class="anchor-link" href="#8.-ESC-5:-Plot-the-confusion-matrix">¶</a></h1><p>We want to learn more about our classifier. How well does it perform per class?</p>
+<p>*<strong>Tasks:</strong>*</p>
+<ul>
+<li>Using sklearn, create a confusion matrix of our classifier over the <strong>test set</strong></li>
+<li>Normalize the rows, use <strong>our_classes</strong> as axes tick values</li>
+<li>Display the plot</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ###</span>
+<span class="n">y_test_pred</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="s1">'true'</span><span class="p">)</span>  <span class="c1"># Call the confusion matrix function. Look at your imports again for a hint.</span>
+<span class="n">disp</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">ticks</span><span class="o">=...</span><span class="p">,</span> <span class="n">labels</span><span class="o">=...</span><span class="p">)</span>  <span class="c1"># hint: np.arange(5) = (0, 1, 2, 3, 4)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="o">...</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>[a coloured confusion matrix: each row adds up to 1; labels from *our_classes* on x-axis &amp; y-axis]
+similar to this:
+</code></pre>
+<p><img alt="image.png" src="data:image/png;base64,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"/></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="Getting-to-know-Tensorflow-for-Neural-Networks"><strong>Getting to know Tensorflow for Neural Networks</strong><a class="anchor-link" href="#Getting-to-know-Tensorflow-for-Neural-Networks">¶</a></h1><h1 id="9.-Import-Tensorflow-modules">9. Import Tensorflow modules<a class="anchor-link" href="#9.-Import-Tensorflow-modules">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span><span class="p">,</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Dropout</span>
+<span class="kn">from</span> <span class="nn">keras.optimizers</span> <span class="kn">import</span> <span class="n">SGD</span>
+<span class="kn">from</span> <span class="nn">keras.losses</span> <span class="kn">import</span> <span class="n">CategoricalCrossentropy</span>
+<span class="kn">from</span> <span class="nn">keras.utils</span> <span class="kn">import</span> <span class="n">to_categorical</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="10.-One-Hot-Encoding-(OHE)-of-targets-(binary-class-matrix)">10. One-Hot Encoding (OHE) of targets (binary class matrix)<a class="anchor-link" href="#10.-One-Hot-Encoding-(OHE)-of-targets-(binary-class-matrix)">¶</a></h1><p>Situation in our dataset:</p>
+<ul>
+<li>We have 5 classes, and only 1 class is always active --&gt; This is a <strong>multi-class</strong> problem.</li>
+<li>Thus, we <strong>categorize</strong> our targets. A OHE'd target with index "3" becomes [0 0 0 1 0] (mapped against the output).</li>
+<li><a href="https://www.tensorflow.org/api_docs/python/tf/keras/utils/to_categorical">https://www.tensorflow.org/api_docs/python/tf/keras/utils/to_categorical</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y_train_ready.shape: </span><span class="si">{</span><span class="n">y_train_ready</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">, y_test_ready.shape: </span><span class="si">{</span><span class="n">y_test_ready</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># These are our shapes so far.</span>
+
+<span class="c1">### START CODING HERE ###</span>
+<span class="n">y_train_ready_OHE</span> <span class="o">=</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">y</span><span class="o">=...</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=...</span><span class="p">)</span>
+<span class="n">y_test_ready_OHE</span> <span class="o">=</span> <span class="o">....</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y_train_ready_OHE.shape: </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">, y_test_ready_OHE.shape: </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># These are our new shapes.</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>y_train_ready.shape: (34560,), y_test_ready.shape: (8640,)
+y_train_ready_OHE.shape: (34560, 5), y_test_ready_OHE.shape: (8640, 5)
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="11.-Build-a-simple-DNN-(Sequential-API-&amp;-Functional-API)">11. Build a simple DNN (Sequential API &amp; Functional API)<a class="anchor-link" href="#11.-Build-a-simple-DNN-(Sequential-API-&amp;-Functional-API)">¶</a></h1><ul>
+<li>Building an NN can be straightforward. Let's build a simple, extendable</li>
+</ul>
+<p>architecture.</p>
+<ul>
+<li>Training and evaluating an NN is very similar to what you saw for the kNN-classifier.</li>
+<li>Sequential API: <a href="https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/">https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/</a></li>
+<li>Functional API: <a href="https://machinelearningmastery.com/keras-functional-api-deep-learning/">https://machinelearningmastery.com/keras-functional-api-deep-learning/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Sequential API</span>
+<span class="n">model_seq</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model_seq</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="mi">128</span><span class="p">))</span>       <span class="c1"># input layer, 128 input features due to our feature extraction process (Dense == Fully Connected)</span>
+<span class="n">model_seq</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"relu"</span><span class="p">))</span>   <span class="c1"># hidden layer 1</span>
+<span class="n">model_seq</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"relu"</span><span class="p">))</span>    <span class="c1"># hidden layer 2</span>
+<span class="n">model_seq</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"softmax"</span><span class="p">))</span>  <span class="c1"># output layer. Often this is sigmoid (each index can be between 0 and 1), or softmax (all indices sum up to 1)</span>
+
+<span class="c1"># Functional API (node-like)</span>
+<span class="n">model_func_in</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">128</span><span class="p">,))</span>                               <span class="c1"># input layer</span>
+<span class="n">model_func_x</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"relu"</span><span class="p">)(</span><span class="n">model_func_in</span><span class="p">)</span>        <span class="c1"># hidden layer 1</span>
+<span class="n">model_func_x</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"relu"</span><span class="p">)(</span><span class="n">model_func_x</span><span class="p">)</span>         <span class="c1"># hidden layer 2</span>
+<span class="n">model_func_x</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"relu"</span><span class="p">)(</span><span class="n">model_func_x</span><span class="p">)</span>         <span class="c1"># hidden layer 3</span>
+<span class="n">model_func_out</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"softmax"</span><span class="p">)(</span><span class="n">model_func_x</span><span class="p">)</span>     <span class="c1"># output layer</span>
+<span class="n">model_func</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">model_func_in</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">model_func_out</span><span class="p">)</span>  <span class="c1"># model instance, specified with input and output layers</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># To simplify the following cells, select a desired model here</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">model_seq</span>
+<span class="c1">#model = model_func</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">SGD</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="mf">0.001</span><span class="p">),</span> <span class="n">loss</span><span class="o">=</span><span class="n">CategoricalCrossentropy</span><span class="p">(),</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s2">"accuracy"</span><span class="p">])</span>  <span class="c1"># Compiles the model</span>
+<span class="c1"># -&gt; Given this loss function, "accuracy" means "Categorical Accuracy". Notice how "Categorical" relates to OHE</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>  <span class="c1"># Prints the architecture</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Semi-expected output (depends on the selected model and its architecture):</p>
+<pre><code>Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_8 (Dense)             (None, 128)               16512     
+
+ dense_9 (Dense)             (None, 256)               33024     
+
+ dense_10 (Dense)            (None, 64)                16448     
+
+ dense_11 (Dense)            (None, 5)                 325       
+
+=================================================================
+Total params: 66,309
+Trainable params: 66,309
+Non-trainable params: 0
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Now, <strong>train</strong> the model on the <strong>train set</strong> with the <strong>OHE targets</strong> for 10 epochs.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ###</span>
+<span class="n">model</span><span class="o">...</span><span class="p">(</span><span class="n">x</span><span class="o">=...</span><span class="p">,</span> <span class="n">y</span><span class="o">=...</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Semi-expected output (loss and accuracy values will vary):</p>
+<pre><code>Epoch 1/10
+1080/1080 [==============================] - 3s 2ms/step - loss: 1.4017 - accuracy: 0.4617
+...
+Epoch 9/10
+1080/1080 [==============================] - 2s 2ms/step - loss: 1.0937 - accuracy: 0.5282
+Epoch 10/10
+1080/1080 [==============================] - 2s 2ms/step - loss: 1.0803 - accuracy: 0.5304
+&lt;keras.callbacks.History at 0x7fd1e1c21f90&gt;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Now, <strong>evaluate</strong> the model on the <strong>test set</strong> and print the scores.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ###</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">model</span><span class="o">...</span><span class="p">(</span><span class="n">x</span><span class="o">=...</span><span class="p">,</span> <span class="n">y</span><span class="o">=...</span><span class="p">,</span> <span class="n">return_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Scores: ..."</span><span class="p">)</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Semi-expected output (loss and accuracy values will vary):</p>
+<pre><code>270/270 [==============================] - 0s 1ms/step - loss: 1.1512 - accuracy: 0.4878
+Scores: {'loss': 1.1512354612350464, 'accuracy': 0.4878472089767456}
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Finally, we would like to see the confusion matrix for this model.</p>
+<ul>
+<li>Use the <strong>predict</strong>-function to classify the <strong>test set</strong>. This will give us "predicted targets".</li>
+<li>Because the targets &amp; predictions are vectors (remember OHE), we need their <strong>argmax</strong> along a certain axis.</li>
+<li>argmax retrieves the index at which the array contains the highest value.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ###</span>
+<span class="c1"># Predict the test set</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">...</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Shape of predictions: </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Plot confusion matrix</span>
+<span class="n">confmat</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_true</span><span class="o">=...</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=...</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="s2">"true"</span><span class="p">)</span>
+<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=...</span><span class="p">,</span> <span class="n">display_labels</span><span class="o">=...</span><span class="p">)</span>
+<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xticks_rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>  <span class="c1"># rotate labels on x-axis for readability</span>
+<span class="o">...</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>Shape of predictions: (8640, 5)
+[a coloured confusion matrix]
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="12.-Build-a-simple-CNN-(Functional-API)">12. Build a simple CNN (Functional API)<a class="anchor-link" href="#12.-Build-a-simple-CNN-(Functional-API)">¶</a></h1><ul>
+<li>Convolutional NNs are powerful NNs with large tuneable variety.</li>
+<li>Feel free to adjust number of filters and kernel sizes. But careful: The output may shrink by doing so!</li>
+<li>In the model summary, observe what happens with after each layer.</li>
+</ul>
+<p><strong>NOTE:</strong> We build the model first. More explanations are in the cell after.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Input layer</span>
+<span class="n">model_cnn_in</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># Why 3 dims here...? "num_examples" can be left "unknown". Note "(None)" in the summary. (See next cell for more info.)</span>
+
+<span class="c1"># Hidden layers</span>
+<span class="n">model_cnn_conv1</span> <span class="o">=</span> <span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"relu"</span><span class="p">)(</span><span class="n">model_cnn_in</span><span class="p">)</span>  <span class="c1"># Input is a vector (1, 128), so (1, 3) spans the kernel only over the feature dimension</span>
+<span class="n">model_cnn_pool1</span> <span class="o">=</span> <span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))(</span><span class="n">model_cnn_conv1</span><span class="p">)</span>  <span class="c1"># Same as above: We pool only in frequency dimension</span>
+<span class="n">model_cnn_conv2</span> <span class="o">=</span> <span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"relu"</span><span class="p">)(</span><span class="n">model_cnn_pool1</span><span class="p">)</span>
+<span class="n">model_cnn_pool2</span> <span class="o">=</span> <span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))(</span><span class="n">model_cnn_conv2</span><span class="p">)</span>
+<span class="n">model_cnn_conv2</span> <span class="o">=</span> <span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"relu"</span><span class="p">)(</span><span class="n">model_cnn_pool2</span><span class="p">)</span>
+
+<span class="c1"># Towards backend</span>
+<span class="n">model_cnn_flat</span> <span class="o">=</span> <span class="n">Flatten</span><span class="p">()(</span><span class="n">model_cnn_conv2</span><span class="p">)</span>
+<span class="n">model_cnn_drop1</span> <span class="o">=</span> <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)(</span><span class="n">model_cnn_flat</span><span class="p">)</span>
+<span class="n">model_cnn_dense1</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"relu"</span><span class="p">)(</span><span class="n">model_cnn_drop1</span><span class="p">)</span>
+
+<span class="c1"># Output layer</span>
+<span class="n">model_cnn_out</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">"softmax"</span><span class="p">)(</span><span class="n">model_cnn_dense1</span><span class="p">)</span>
+
+<span class="c1"># Actual model creation</span>
+<span class="n">model_cnn</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">model_cnn_in</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">model_cnn_out</span><span class="p">)</span>
+<span class="n">model_cnn</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">SGD</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span> <span class="n">loss</span><span class="o">=</span><span class="n">CategoricalCrossentropy</span><span class="p">(),</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s2">"accuracy"</span><span class="p">])</span>
+<span class="n">model_cnn</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>[CNN model architecture]
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>CNN: Preparation of tensors</strong></p>
+<ul>
+<li>For 2D convolutional layers, we need to reshape our tensors.</li>
+<li>2D conv layers take a 4D-input of the form NHWC: <em>(num_examples, height, width, channels)</em>.<ul>
+<li><strong>num_examples</strong>: (in this case) total number of frames, here: 34560 (for the train set)</li>
+<li><strong>height</strong>: number of time frames per example, here: 1</li>
+<li><strong>width</strong>: feature dimension, here: 128</li>
+<li><strong>channels</strong>: audio channels, here: 1 (mono)</li>
+</ul>
+</li>
+</ul>
+<p><strong>IMPORTANT NOTES:</strong></p>
+<ul>
+<li>Above numbers are valid for our frame-based approach.</li>
+</ul>
+<p>We could also translate <em>num_examples</em> to number of files, then each example would have a <em>height</em> of 216 (because each file has 216 frames).</p>
+<ul>
+<li>In our particular example, we could also use 1D conv layers with, e.g., kernel_size=(3). Same for MaxPooling.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Convert tensors to correct input shape (for both training and test sets)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Shapes: X_train_ready </span><span class="si">{</span><span class="n">X_train_ready</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">, y_train_ready_OHE </span><span class="si">{</span><span class="n">y_train_ready_OHE</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="c1"># Shape X_train_ready: (34560, 128)    &lt;-- needs format adjustment</span>
+<span class="c1"># Shape y_train_ready_OHE: (34560, 5)  &lt;-- already in correct format</span>
+
+<span class="c1"># potentially: feed more "height" (time) in by switching dimensions to (1, 34560, 128, 1), then slicing the tensor into 160 tensors (with 216 frames each, essentially per-file training then)</span>
+
+<span class="c1">### START CODING HERE ###</span>
+<span class="c1"># Add channel dimension</span>
+<span class="n">X_train_cnn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">X_train_ready</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (34560, 128, 1)</span>
+<span class="n">X_test_cnn</span> <span class="o">=</span> <span class="o">...</span>                                      <span class="c1"># (8640, 128, 1)</span>
+
+<span class="c1"># Add height dimension</span>
+<span class="n">X_train_cnn</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="n">X_train_cnn</span><span class="p">,</span> <span class="n">axis</span><span class="o">=...</span><span class="p">)</span>  <span class="c1"># (34560, 1, 128, 1)</span>
+<span class="n">X_test_cnn</span> <span class="o">=</span> <span class="o">...</span>                          <span class="c1"># (8640, 1, 128, 1)</span>
+
+<span class="c1"># New shapes</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Final shapes: X_train_cnn </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">, X_test_cnn </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>Shapes: X_train_ready (34560, 128), y_train_ready_OHE (34560, 5)
+Final shapes: X_train_cnn (34560, 1, 128, 1), X_test_cnn (8640, 1, 128, 1)
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Train</strong> the CNN on the correct tensors for 10 epochs with a batch size of 16.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ###</span>
+<span class="n">model_cnn</span><span class="o">...</span><span class="p">(</span><span class="n">x</span><span class="o">=...</span><span class="p">,</span> <span class="n">y</span><span class="o">=...</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Semi-expected output:</p>
+<pre><code>Epoch 1/10
+2160/2160 [==============================] - 47s 21ms/step - loss: 1.0592 - accuracy: 0.5251
+...
+Epoch 9/10
+2160/2160 [==============================] - 47s 22ms/step - loss: 0.7470 - accuracy: 0.6611
+Epoch 10/10
+2160/2160 [==============================] - 46s 21ms/step - loss: 0.7371 - accuracy: 0.6646
+&lt;keras.callbacks.History at 0x7fd1ecc0de90&gt;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Evaluate</strong> the CNN on the <strong>test set</strong> and print the scores.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ###</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">model_cnn</span><span class="o">...</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">return_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Scores: ..."</span><span class="p">)</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Semi-expected output:</p>
+<pre><code>270/270 [==============================] - 1s 5ms/step - loss: 1.0290 - accuracy: 0.5950
+Scores: {'loss': 1.0289990901947021, 'accuracy': 0.5950231552124023}
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Confusion matrix</strong>: Get the predictions for the <strong>test set</strong>, then consider the <strong>argmax</strong> again.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### START CODING HERE ####</span>
+<span class="c1"># Predict test set</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">model_cnn</span><span class="o">...</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Shape of predictions: </span><span class="si">{</span><span class="o">...</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Plot confusion matrix</span>
+<span class="n">confmat</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_true</span><span class="o">=...</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="s2">"true"</span><span class="p">)</span>
+<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=...</span><span class="p">,</span> <span class="n">display_labels</span><span class="o">=...</span><span class="p">)</span>
+<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xticks_rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="o">...</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># display plot</span>
+<span class="c1">### END CODING HERE ###</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Expected output:</p>
+<pre><code>Shape of predictions: (8640, 5)
+[a coloured confusion matrix]
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h1 id="13.-Hyper-parameter-tuning">13. Hyper-parameter tuning<a class="anchor-link" href="#13.-Hyper-parameter-tuning">¶</a></h1><p>Try playing around with these values and see how it affects the results:</p>
+<ul>
+<li><strong>learning rate</strong>: go in steps of an order of (half) magnitude, e.g. 1.0, 0.1, 0.01, 0.005...</li>
+<li><strong>batch size</strong>: e.g. 1, 16, 32, 216. 216 will result in 160 batches. Where have you seen this number before?</li>
+</ul>
 </div>
 </div>
 </div>
