@@ -30,10 +30,9 @@ This lecture will be held for the fourth time in the Winter semester 2023/24 as 
 
 Seminars are held by Dipl.-Ing. Christian Kehling.
 
- - Seminar 1 - Introduction to Python - [IPython Notebook (ipynb)](Machine_Listening_Seminar_1.ipynb), [html](Machine_Listening_Seminar_1.html), [Piano1-1.wav](Piano1-1.wav)
- - Seminar 2 - Audio Processing Basics - [ipynb](Machine_Listening_Seminar_2.ipynb), [html](Machine_Listening_Seminar_2.html)
- - Seminar 3 - Sound Classification - [ipynb](Machine_Listening_2021_2022_Seminar_3.ipynb), [html](Machine_Listening_2021_2022_Seminar_3.html); <!--Solutions: [ipynb](Machine_Listening_2021_2022_Seminar_3_Solutions.ipynb), [html](Machine_Listening_2021_2022_Seminar_3_Solutions.html) -->
- - Seminar 4 - Sound/Music Classification and NNs - [ipynb](Machine_Listening_2021_2022_Seminar_4.ipynb), [html](Machine_Listening_2021_2022_Seminar_4.html); <!--Solutions: [ipynb](Machine_Listening_2021_2022_Seminar_4_Solutions.ipynb), [html](Machine_Listening_2021_2022_Seminar_4_Solutions.html) -->
+ - Seminar 1 - Introduction to Python/Audio Processing Basics - [IPython Notebook (ipynb)](Machine_Listening_Seminar_1.ipynb), [html](Machine_Listening_Seminar_1.html), [Piano1-1.wav](Piano1-1.wav)
+ - Seminar 2 - Sound Classification using Support Vector Machine - [ipynb](Machine_Listening_Seminar_2.ipynb), [html](Machine_Listening_Seminar_2.html)
+ - Seminar 3 - Sound/Music Classification with Neural Networks - [ipynb](Machine_Listening_Seminar_3.ipynb), [html](Machine_Listening_Seminar_3.html); 
 
 
 ## AI-based Audio Analysis (KI-gestützte Audioanalyse von Musik und Soundscapes) 
