@@ -4,6 +4,12 @@ This website provides the lecture / seminar materials of different lectures on t
 
 Please contact Dr.-Ing. Jakob Abeßer @ <jakob.abesser@idmt.fraunhofer.de> for questions.
 
+## Computational Analysis of Sounds and Music
+
+[This website](https://machinelistening.github.io/casm/) provides the slides & materials for the lecture [Computational Analysis of Sound and Music](https://www.tu-ilmenau.de/modultafeln/?fnqall=201260), 
+which will be held during the summer semester 2024 at the [TU Ilmenau](https://www.tu-ilmenau.de/).
+
+
 ## Machine Listening for Music and Sound Analysis 
 
 This lecture will be held for the fourth time in the Winter semester 2023/24 as part of the **Audio Signal Processing & Audio Systems** Module at [TU Ilmenau](https://www.tu-ilmenau.de/).
