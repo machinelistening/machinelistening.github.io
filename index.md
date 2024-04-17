@@ -1,8 +1,11 @@
-# Machine Listening Lectures
 
 This website provides the lecture / seminar materials of different lectures on the topic of machine listening.
 
 Please contact Dr.-Ing. Jakob Abeßer @ <jakob.abesser@idmt.fraunhofer.de> for questions.
+
+## Licence 
+
+All lecture material is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Computational Analysis of Sounds and Music
 
